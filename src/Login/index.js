@@ -28,19 +28,43 @@ const Login = () => {
   return (
     <div>
       <h1>Login Form</h1>
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        <div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          marginBottom: "30px",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            textAlign: "center",
+            alignItems: "center",
+          }}
+        >
           <span>Email</span>
           <input
+            style={{ width: "300px", height: "30px", marginTop: "10px" }}
             onChange={handleChange}
             type="text"
             name="userName"
             placeholder="User Name"
           />
         </div>
-        <div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            textAlign: "center",
+            alignItems: "center",
+          }}
+        >
           <span>Password</span>
           <input
+            style={{ width: "300px", height: "30px", marginTop: "10px" }}
             onChange={handleChange}
             type="text"
             name="password"
@@ -48,7 +72,16 @@ const Login = () => {
           />
         </div>
       </div>
-      <button onClick={handleFormData}>Log IN</button>
+      <button
+        style={{
+          width: "80px",
+          height: "25px",
+          backgroundColor: "green",
+        }}
+        onClick={handleFormData}
+      >
+        Log IN
+      </button>
       {isAuthenticated && <h2>Loggedin</h2>}
     </div>
   );
